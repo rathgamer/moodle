@@ -4,21 +4,21 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('DATABASE_TYPE');
+$CFG->dbtype    = getenv('pgsql');
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = getenv('DATABASE_HOST');
-$CFG->dbname    = getenv('DATABASE_NAME');
-$CFG->dbuser    = getenv('DATABASE_USER');
-$CFG->dbpass    = getenv('DATABASE_PASSWORD');
+$CFG->dbhost    = getenv('ec2-54-166-114-48.compute-1.amazonaws.com');
+$CFG->dbname    = getenv('d8of24vrcadi2k');
+$CFG->dbuser    = getenv('cgdwzsxuormssg');
+$CFG->dbpass    = getenv('8cbb3be04137d5b5ae4acd97003c2d3b7805039c56de219cc0b472d60abf6ba0');
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => getenv('DATABASE_PORT'),
+  'dbport' => getenv('5432'),
   'dbsocket' => '',
 );
 
-$CFG->wwwroot   = getenv('WWWROOT');
-$CFG->dataroot  = getenv('DATAROOT');
+$CFG->wwwroot   = getenv('/tmp');
+$CFG->dataroot  = getenv('http://psg-infinity.herokuapp.com');
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
